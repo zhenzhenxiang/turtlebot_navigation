@@ -1,18 +1,12 @@
 global_costmap:
-   global_frame: /odom
-   #global_frame: /map
+   global_frame: /map
    robot_base_frame: /base_footprint
-   update_frequency: 5.0 #1.0
-   publish_frequency: 2.0 #0.5
-   static_map: false
-   width: 100.0
-   height: 100.0
-   resolution: 0.10
-   origin_x: -5.0
-   origin_y: -50.0
+   update_frequency: 1.0
+   publish_frequency: 0.5
+   static_map: true
    transform_tolerance: 0.5
    plugins:
-     #- {name: static_layer,            type: "costmap_2d::StaticLayer"}
+     - {name: static_layer,            type: "costmap_2d::StaticLayer"}
      - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
      - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
 
